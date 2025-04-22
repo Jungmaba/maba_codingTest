@@ -14,15 +14,5 @@ for (let i = n + 1; i <= 2 * n; i++) {
   b.push(input[i].split(' ').map(Number));
 }
 
-const result = [];
-
-for (let i = 0; i < n; i++) {
-  const row = [];
-  for (let j = 0; j < m; j++) {
-    row.push(a[i][j] + b[i][j]);
-  }
-  result.push(row);
-}
-
-const output = result.map((row) => row.join(' ')).join('\n');
-console.log(output);
+const result = a.map((row, i) => row.map((value, j) => value + b[i][j]));
+result.forEach((row) => console.log(row.join(' ')));
