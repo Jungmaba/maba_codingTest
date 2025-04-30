@@ -1,9 +1,8 @@
 function solution(w, h) {
-    var answer = 0;
     let tmp = 0;
     let width = w;
     let hight = h;
-    let gcb = 0;
+    let gcd = 0;
     
     if(width < hight){
         tmp = width;
@@ -16,8 +15,7 @@ function solution(w, h) {
         width = hight;
         hight = tmp;
     }
-    gcb = width;
-    
+    gcd = width;
     
     return w*h-(w+h-gcb);
 }
